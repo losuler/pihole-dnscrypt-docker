@@ -32,7 +32,7 @@
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
 
-listen_addresses = []
+listen_addresses = ['0.0.0.0:5300']
 
 
 ## Maximum number of simultaneous client connections to accept
