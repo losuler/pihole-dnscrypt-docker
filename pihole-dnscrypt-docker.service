@@ -1,0 +1,12 @@
+[Unit]
+Description=Pi-hole DNSCrypt Docker
+After=docker.service
+Requires=docker.service
+
+[Service]
+WorkingDirectory=/path/to/pihole-dnscrypt-docker
+ExecStart=/usr/bin/docker-compose up --force-recreate
+ExecStop=/usr/bin/docker-compose stop
+
+[Install]
+WantedBy=multi-user.target
