@@ -64,3 +64,11 @@ To view the entire log (append `-f` to view a live feed of the logs):
 ```
 sudo journalctl -u pihole-dnscrypt-docker
 ```
+
+## Testing
+
+To test the running of the docker-compose before running the service:
+
+```
+sudo docker-compose up --force-recreate
+```
