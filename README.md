@@ -2,7 +2,13 @@
 
 ## About
 
-A docker-compose for Pi-hole and DNSCrypt, daemonized with a systemd service file.
+A docker-compose for Pi-hole and DNSCrypt, daemonized with a systemd service file. 
+
+### Uses the following Docker containers:
+
+https://github.com/pi-hole/docker-pi-hole
+
+https://github.com/klutchell/dnscrypt-proxy
 
 ## Dependencies
 
