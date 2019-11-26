@@ -60,7 +60,7 @@ sudo systemctl enable pihole-dnscrypt-docker
 8. Start the systemd service:
 
 ```
-sudo systemctil start pihole-dnscrypt-docker
+sudo systemctl start pihole-dnscrypt-docker
 ```
 
 ## Viewing logs
