@@ -39,16 +39,16 @@ WEBPASSWORD: 'secure-password'
 
 4. Optionally edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
 
-5. Reload the systemd manager configuration:
-
-```
-sudo systemctl daemon-reload
-```
-
-6. Copy the systemd service file:
+5. Copy the systemd service file:
 
 ```
 sudo cp pihole-dnscrypt-docker.service /usr/lib/systemd/system/
+```
+
+6. Reload the systemd manager configuration:
+
+```
+sudo systemctl daemon-reload
 ```
 
 7. Enable the systemd service:
