@@ -63,6 +63,32 @@ sudo systemctl enable pihole-dnscrypt-docker
 sudo systemctl start pihole-dnscrypt-docker
 ```
 
+## Updating images
+
+1. To update all images used by this docker-compose:
+
+```
+sudo docker-compose pull
+```
+
+2. Restart the systemd service:
+
+```
+sudo systemctl restart pihole-dnscrypt-docker
+```
+
+3. (Optional) List old/unused images:
+
+```
+sudo docker images -f dangling=true
+```
+
+4. (Optional) Remove old/unused images:
+
+```
+sudo docker image prune
+```
+
 ## Viewing logs
 
 To view the status of the service:
