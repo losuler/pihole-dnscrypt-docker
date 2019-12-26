@@ -42,7 +42,7 @@ WEBPASSWORD: 'secure-password'
 5. Copy the systemd service file:
 
 ```
-sudo cp pihole-dnscrypt-docker.service /usr/lib/systemd/system/
+sudo cp pihole-dnscrypt-docker.service /etc/systemd/system/
 ```
 
 6. Reload the systemd manager configuration:
