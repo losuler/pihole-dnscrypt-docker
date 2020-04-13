@@ -31,13 +31,21 @@ git clone https://gitlab.com/losuler/pihole-dnscrypt-docker
 WorkingDirectory=/path/to/pihole-dnscrypt-docker
 ```
 
-3. (Optional) Edit `docker-compose.yml` and uncomment `WEBPASSWORD` with a password of your choice:
+3. **Optional** Edit `docker-compose.yml`:
+
+Uncomment `WEBPASSWORD` and put in a password, by default it will be randomized.
 
 ```
-WEBPASSWORD: 'secure-password'
+WEBPASSWORD: 'password'
 ```
 
-4. (Optional) Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
+Uncomment `TZ` and put in your timezone (see `timedatectl list-timezones`), default is UTC.
+
+```
+TZ: 'America/Chicago'
+```
+
+4. **Optional** Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
 
 5. Copy the systemd service file:
 
