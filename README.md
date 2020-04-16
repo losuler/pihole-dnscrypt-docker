@@ -31,7 +31,7 @@ docker-compose
     WorkingDirectory=/path/to/pihole-dnscrypt-docker
     ```
 
-3. (Optional) Edit `docker-compose.yml`:
+3. *Optional* Edit `docker-compose.yml`:
 
     Uncomment `WEBPASSWORD` and put in a password, by default it will be randomized.
 
@@ -45,7 +45,7 @@ docker-compose
     TZ: 'America/Chicago'
     ```
 
-4. (Optional) Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
+4. *Optional* Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
 
 5. Copy the systemd service file:
 
@@ -85,13 +85,13 @@ docker-compose
     sudo systemctl restart pihole-dnscrypt-docker
     ```
 
-3. (Optional) List old/unused images:
+3. *Optional* List old/unused images:
 
     ```
     sudo docker images -f dangling=true
     ```
 
-4. (Optional) Remove old/unused images:
+4. *Optional* Remove old/unused images:
 
     ```
     sudo docker image prune
