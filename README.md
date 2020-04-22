@@ -35,23 +35,21 @@ docker-compose
 
 ## Configuration
 
-Edit `docker-compose.yml`.
+- Edit `docker-compose.yml` in the following ways.
 
-Uncomment `WEBPASSWORD` and put in a password, by default it will be randomized.
+    - Uncomment `WEBPASSWORD` and put in a password, by default it will be randomized.
 
-```yaml
-WEBPASSWORD: 'password'
-```
+        ```yaml
+        WEBPASSWORD: 'password'
+        ```
 
-Uncomment `TZ` and put in your timezone, default is UTC.
+    - Uncomment `TZ` and put in your timezone (see `timedatectl list-timezones`), default is UTC.
 
-- On Linux you can use `timedatectl list-timezones` to find the correct timezone.
+        ```yaml
+        TZ: 'America/Chicago'
+        ```
 
-```yaml
-TZ: 'America/Chicago'
-```
-
-Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
+- Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
 
 ## Installation
 
