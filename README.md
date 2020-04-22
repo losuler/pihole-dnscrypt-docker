@@ -79,16 +79,10 @@ Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
     sudo systemctl daemon-reload
     ```
 
-5. Enable the systemd service.
+5. Enable and start the systemd service.
 
     ```
-    sudo systemctl enable pihole-dnscrypt-docker
-    ```
-
-6. Start the systemd service.
-
-    ```
-    sudo systemctl start pihole-dnscrypt-docker
+    sudo systemctl enable --now pihole-dnscrypt-docker
     ```
 
 ## Updating images
