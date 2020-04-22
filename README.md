@@ -43,7 +43,9 @@ Uncomment `WEBPASSWORD` and put in a password, by default it will be randomized.
 WEBPASSWORD: 'password'
 ```
 
-Uncomment `TZ` and put in your timezone (see `timedatectl list-timezones`), default is UTC.
+Uncomment `TZ` and put in your timezone, default is UTC.
+
+- On Linux you can use `timedatectl list-timezones` to find the correct timezone.
 
 ```yaml
 TZ: 'America/Chicago'
