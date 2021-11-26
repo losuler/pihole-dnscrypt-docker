@@ -25,14 +25,6 @@ docker-compose
 - https://github.com/pi-hole/docker-pi-hole
 - https://github.com/klutchell/dnscrypt-proxy
 
-## Table of Contents
-
-- [Configuration](#configuration)
-- [Installation](#installation)
-- [Updating images](#updating-images)
-- [Viewing logs](#viewing-logs)
-- [Testing](#testing)
-
 ## Configuration
 
 Edit `docker-compose.yml` in the following ways.
@@ -60,7 +52,7 @@ Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
     ```
     git clone https://gitlab.com/losuler/pihole-dnscrypt-docker
     ```
-    
+
 2. Edit `pihole-dnscrypt-docker.service` to point to the directory of the cloned repository.
 
     ```
