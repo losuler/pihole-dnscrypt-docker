@@ -70,19 +70,19 @@ Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
 3. Copy the systemd service file.
 
     ```
-    sudo cp pihole-dnscrypt-docker.service /etc/systemd/system/
+    cp pihole-dnscrypt-docker.service /etc/systemd/system/
     ```
 
 4. Reload the systemd manager configuration.
 
     ```
-    sudo systemctl daemon-reload
+    systemctl daemon-reload
     ```
 
 5. Enable and start the systemd service.
 
     ```
-    sudo systemctl enable --now pihole-dnscrypt-docker
+    systemctl enable --now pihole-dnscrypt-docker
     ```
 
 ## Updating images
@@ -90,25 +90,25 @@ Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
 1. To update all images used by this docker-compose.
 
     ```
-    sudo docker-compose pull
+    docker-compose pull
     ```
 
 2. Restart the systemd service.
 
     ```
-    sudo systemctl restart pihole-dnscrypt-docker
+    systemctl restart pihole-dnscrypt-docker
     ```
 
 List old/unused images.
 
 ```
-sudo docker images -f dangling=true
+docker images -f dangling=true
 ```
 
 Remove old/unused images.
 
 ```
-sudo docker image prune
+docker image prune
 ```
 
 ## Viewing logs
@@ -116,13 +116,13 @@ sudo docker image prune
 To view the status of the service.
 
 ```
-sudo systemctl status pihole-dnscrypt-docker
+systemctl status pihole-dnscrypt-docker
 ```
 
 To view the entire log (append `-f` to view a live feed of the logs).
 
 ```
-sudo journalctl -u pihole-dnscrypt-docker
+journalctl -u pihole-dnscrypt-docker
 ```
 
 ## Testing
@@ -130,5 +130,5 @@ sudo journalctl -u pihole-dnscrypt-docker
 To test the running of the docker-compose before running the service.
 
 ```
-sudo docker-compose up --force-recreate
+docker-compose up --force-recreate
 ```
