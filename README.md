@@ -49,31 +49,31 @@ Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
 
 1. Clone this repository to a directory of your choice.
 
-    ```
+    ```bash
     git clone https://gitlab.com/losuler/pihole-dnscrypt-docker
     ```
 
 2. Edit `pihole-dnscrypt-docker.service` to point to the directory of the cloned repository.
 
-    ```
+    ```bash
     WorkingDirectory=/path/to/pihole-dnscrypt-docker
     ```
 
 3. Copy the systemd service file.
 
-    ```
+    ```bash
     cp pihole-dnscrypt-docker.service /etc/systemd/system/
     ```
 
 4. Reload the systemd manager configuration.
 
-    ```
+    ```bash
     systemctl daemon-reload
     ```
 
 5. Enable and start the systemd service.
 
-    ```
+    ```bash
     systemctl enable --now pihole-dnscrypt-docker
     ```
 
@@ -81,25 +81,25 @@ Edit `etc-dnscrypt-proxy/dnscrypt-proxy.toml` to your preference.
 
 1. To update all images used by this docker-compose.
 
-    ```
+    ```bash
     docker-compose pull
     ```
 
 2. Restart the systemd service.
 
-    ```
+    ```bash
     systemctl restart pihole-dnscrypt-docker
     ```
 
 List old/unused images.
 
-```
+```bash
 docker images -f dangling=true
 ```
 
 Remove old/unused images.
 
-```
+```bash
 docker image prune
 ```
 
@@ -107,13 +107,13 @@ docker image prune
 
 To view the status of the service.
 
-```
+```bash
 systemctl status pihole-dnscrypt-docker
 ```
 
 To view the entire log (append `-f` to view a live feed of the logs).
 
-```
+```bash
 journalctl -u pihole-dnscrypt-docker
 ```
 
@@ -121,6 +121,6 @@ journalctl -u pihole-dnscrypt-docker
 
 To test the running of the docker-compose before running the service.
 
-```
+```bash
 docker-compose up --force-recreate
 ```
